@@ -1,18 +1,30 @@
 $(document).ready(function() {
     // Toggle dropdown menus on hover
-    $('.dropdown').hover(function() {
-        $(this).find('.dropdown-content').show();
-    }, function() {
-        $(this).find('.dropdown-content').hide();
+    $('.dropdown').on('mouseenter', function() {
+        $(this).find('.dropdown-content').stop(true, true).slideDown(200); // Smooth slide down
+    }).on('mouseleave', function() {
+        $(this).find('.dropdown-content').stop(true, true).slideUp(200); // Smooth slide up
     });
 
     // Add smooth scrolling for navigation links
     $('nav a').click(function(event) {
-        event.preventDefault(); 
-        var target = $(this).attr('href'); 
+        event.preventDefault();
+        var target = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(target).offset().top 
+            scrollTop: $(target).offset().top
         }, 1000); // Adjust scroll speed (1000 milliseconds = 1 second)
+    });
+
+    // Hero Slider Initialization
+    $('.hero-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 
     // Bundles Carousel Initialization
@@ -39,18 +51,30 @@ $(document).ready(function() {
         ]
     });
 
+    // Reasons Carousel Initialization
+    $('.reasons-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     // Browse by Health Needs Card Hover Effect
     $('.need-card').hover(function() {
-        $(this).find('p').show(); // Show description on hover
-        $(this).css('transform', 'translateY(-5px) scale(1.05)'); // Zoom slightly
+        $(this).find('.card-overlay').stop(true, true).fadeIn(200); // Show overlay on hover
     }, function() {
-        $(this).find('p').hide(); // Hide description on mouseout
-        $(this).css('transform', 'translateY(0) scale(1)'); // Reset transform
+        $(this).find('.card-overlay').stop(true, true).fadeOut(200); // Hide overlay on mouseout
     });
 
     // Add click event for cards (replace with your actual redirect logic)
     $('.need-card').click(function() {
-        var need = $(this).data('need'); 
+        var need = $(this).data('need');
         window.location.href = '/health-needs/' + need; // Replace with the correct URL structure
     });
 
@@ -68,7 +92,7 @@ $(document).ready(function() {
 
     // FAQ Accordion
     $('.faq-item h3').click(function() {
-        $(this).next('p').slideToggle();
+        $(this).next('p').slideToggle(200); // Smooth slide toggle
         $(this).toggleClass('active'); // Toggle the active class for styling
     });
 
