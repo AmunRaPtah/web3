@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greencure Solutions</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
-    <script src="script.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -25,18 +25,18 @@
                 </div>
                 <div class="header-right">
                     <form class="search-form">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Search..." aria-label="Search">
+                        <button type="submit" aria-label="Search Button"><i class="fas fa-search"></i></button>
                     </form>
                     <ul class="social-icons">
-                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
                     </ul>
-                    <div class="cart">
+                    <div class="cart" aria-label="Cart">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <div class="account">
+                    <div class="account" aria-label="Account">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
@@ -97,137 +97,90 @@
     </header>
 
     <section id="hero">
+        <video autoplay muted loop>
+            <source src="https://images.pexels.com/videos/1422234/free-stock-footage-of-a-person-doing-yoga-in-nature-with-a-beautiful-sunset-view.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="container">
-            <div class="hero-slider">
-                <div class="slide">
-                    <img src="https://images.pexels.com/photos/3810832/pexels-photo-3810832.jpeg" alt="Hero Image 1">
-                    <div class="slide-content">
-                        <h2>Unlock Your Potential: Personalized Wellness Starts at GreenCure</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image 2">
-                    <div class="slide-content">
-                        <h2> Achieve Your Wellness Goals: GreenCure's Tailored Approach</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image 3">
-                    <div class="slide-content">
-                        <h2>Beyond One-Size-Fits-All: Discover Personalized Wellness with GreenCure</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image 4">
-                    <div class="slide-content">
-                        <h2>Science-Backed, Uniquely You: GreenCure's Personalized Wellness</h2>
-                    </div>
-                </div>
-            </div>
+            <h1>Unlock Your Potential: Personalized Wellness Starts at GreenCure</h1>
+            <p>Achieve optimal health and well-being with our science-backed, natural solutions.</p>
+            <a href="#" class="button">Get Started Now</a>
         </div>
     </section>
 
     <section id="browse-needs">
         <div class="container">
             <h2>Browse by Health Needs</h2>
-            <div class="need-carousel">
+            <div class="health-needs-grid">
                 <div class="need-card" data-need="Sharp Mind">
                     <img src="https://images.pexels.com/photos/736742/pexels-photo-736742.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Sharp Mind">
-                    <div class="card-overlay">
-                        <h3>Sharp Mind</h3>
-                        <p>Improve focus, clarity, and cognitive function.</p>
-                    </div>
+                    <h3>Sharp Mind</h3>
+                    <p>Improve focus, clarity, and cognitive function.</p>
                 </div>
                 <div class="need-card" data-need="Energy">
                     <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Energy">
-                    <div class="card-overlay">
-                        <h3>Energy</h3>
-                        <p>Boost energy levels and fight fatigue.</p>
-                    </div>
+                    <h3>Energy</h3>
+                    <p>Boost energy levels and fight fatigue.</p>
                 </div>
                 <div class="need-card" data-need="Mood">
                     <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Mood">
-                    <div class="card-overlay">
-                        <h3>Mood</h3>
-                        <p>Support emotional well-being and balance.</p>
-                    </div>
+                    <h3>Mood</h3>
+                    <p>Support emotional well-being and balance.</p>
                 </div>
                 <div class="need-card" data-need="Relaxation and Sleep">
                     <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Relaxation and Sleep">
-                    <div class="card-overlay">
-                        <h3>Relaxation and Sleep</h3>
-                        <p>Promote relaxation, restful sleep, and stress management.</p>
-                    </div>
+                    <h3>Relaxation and Sleep</h3>
+                    <p>Promote relaxation, restful sleep, and stress management.</p>
                 </div>
                 <div class="need-card" data-need="Longevity and Vitality">
                     <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Longevity and Vitality">
-                    <div class="card-overlay">
-                        <h3>Longevity and Vitality</h3>
-                        <p>Support healthy aging and vitality.</p>
-                    </div>
+                    <h3>Longevity and Vitality</h3>
+                    <p>Support healthy aging and vitality.</p>
                 </div>
                 <div class="need-card" data-need="Inner and Outer Beauty">
                     <img src="https://images.pexels.com/photos/3810832/pexels-photo-3810832.jpeg" alt="Inner and Outer Beauty">
-                    <div class="card-overlay">
-                        <h3>Inner and Outer Beauty</h3>
-                        <p>Enhance your natural beauty from within and out.</p>
-                    </div>
+                    <h3>Inner and Outer Beauty</h3>
+                    <p>Enhance your natural beauty from within and out.</p>
                 </div>
                 <div class="need-card" data-need="Weight loss">
                     <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Weight loss">
-                    <div class="card-overlay">
-                        <h3>Weight loss</h3>
-                        <p>Support healthy weight management.</p>
-                    </div>
+                    <h3>Weight loss</h3>
+                    <p>Support healthy weight management.</p>
                 </div>
                 <div class="need-card" data-need="Gut health">
                     <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Gut health">
-                    <div class="card-overlay">
-                        <h3>Gut health</h3>
-                        <p>Promote digestive well-being and gut health.</p>
-                    </div>
+                    <h3>Gut health</h3>
+                    <p>Promote digestive well-being and gut health.</p>
                 </div>
                 <div class="need-card" data-need="Migraine Prevention">
                     <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Migraine Prevention">
-                    <div class="card-overlay">
-                        <h3>Migraine Prevention</h3>
-                        <p>Help prevent and manage migraines naturally.</p>
-                    </div>
+                    <h3>Migraine Prevention</h3>
+                    <p>Help prevent and manage migraines naturally.</p>
                 </div>
                 <div class="need-card" data-need="Immunity">
                     <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Immunity">
-                    <div class="card-overlay">
-                        <h3>Immunity</h3>
-                        <p>Support a strong and healthy immune system.</p>
-                    </div>
+                    <h3>Immunity</h3>
+                    <p>Support a strong and healthy immune system.</p>
                 </div>
                 <div class="need-card" data-need="Sexual Health">
                     <img src="https://images.pexels.com/photos/3810832/pexels-photo-3810832.jpeg" alt="Sexual Health">
-                    <div class="card-overlay">
-                        <h3>Sexual Health</h3>
-                        <p>Support sexual health and well-being.</p>
-                    </div>
+                    <h3>Sexual Health</h3>
+                    <p>Support sexual health and well-being.</p>
                 </div>
                 <div class="need-card" data-need="Workout and Athletic Performance">
                     <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Workout and Athletic Performance">
-                    <div class="card-overlay">
-                        <h3>Workout and Athletic Performance</h3>
-                        <p>Enhance workout performance and recovery.</p>
-                    </div>
+                    <h3>Workout and Athletic Performance</h3>
+                    <p>Enhance workout performance and recovery.</p>
                 </div>
                 <div class="need-card" data-need="Detox">
                     <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Detox">
-                    <div class="card-overlay">
-                        <h3>Detox</h3>
-                        <p>Support natural detoxification and cleansing.</p>
-                    </div>
+                    <h3>Detox</h3>
+                    <p>Support natural detoxification and cleansing.</p>
                 </div>
                 <div class="need-card" data-need="Holistic health">
                     <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Holistic health">
-                    <div class="card-overlay">
-                        <h3>Holistic health</h3>
-                        <p>Promote overall well-being and balance.</p>
-                    </div>
+                    <h3>Holistic health</h3>
+                    <p>Promote overall well-being and balance.</p>
                 </div>
             </div>
         </div>
@@ -237,7 +190,7 @@
     <section id="bundles">
         <div class="container">
             <div class="bundles-hero">
-                <div class="hero-image" style="background-image: url('https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"> 
+                <div class="hero-image" style="background-image: url('https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
                     <h2>GreenCure Bundles: Simplified Wellness Solutions</h2>
                     <p>Achieve your goals faster with our targeted bundles of natural supplements and functional beverages</p>
                     <a href="#" class="button">Explore Bundles Now</a>
@@ -347,21 +300,21 @@
             <div class="service-grid">
                 <div class="service-item">
                     <figure>
-                        <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Service Image 1">
+                        <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Personalized Nutrition Coaching">
                         <figcaption>Personalized Nutrition Coaching</figcaption>
                     </figure>
                     <p>Our certified nutritionists create personalized nutrition plans tailored to your individual needs and goals.</p>
                 </div>
                 <div class="service-item">
                     <figure>
-                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Service Image 2">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Biohacking for Optimal Performance">
                         <figcaption>Biohacking for Optimal Performance</figcaption>
                     </figure>
                     <p>Discover cutting-edge biohacking techniques to optimize your physical and cognitive performance.</p>
                 </div>
                 <div class="service-item">
                     <figure>
-                        <img src="https://images.pexels.com/photos/736742/pexels-photo-736742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Service Image 3">
+                        <img src="https://images.pexels.com/photos/736742/pexels-photo-736742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mindfulness and Stress Management">
                         <figcaption>Mindfulness and Stress Management</figcaption>
                     </figure>
                     <p>Learn practical techniques to manage stress, improve focus, and cultivate inner peace.</p>
@@ -404,12 +357,11 @@
     <section id="testimonials">
         <div class="container">
             <h2>Testimonials</h2>
-            <!-- Add your testimonials content here -->
             <div class="testimonial-slider">
                 <div class="testimonial">
                     <p>"GreenCure has been a game-changer for me! Their personalized approach and high-quality products have helped me achieve my wellness goals. I highly recommend them!"</p>
                     <div class="author">
-                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Testimonial Author">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Testimonial Author - Sarah M.">
                         <h3>Sarah M.</h3>
                         <p>Satisfied Customer</p>
                     </div>
@@ -417,7 +369,7 @@
                 <div class="testimonial">
                     <p>"I've tried other wellness programs, but nothing compares to GreenCure. They truly understand my unique needs and provide personalized solutions that work. I feel amazing!"</p>
                     <div class="author">
-                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Testimonial Author">
+                        <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Testimonial Author - John D.">
                         <h3>John D.</h3>
                         <p>Happy Customer</p>
                     </div>
@@ -453,15 +405,15 @@
             <h2>Contact Us</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required aria-label="Name">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-label="Email">
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required aria-label="Message"></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" aria-label="Submit Button">Send Message</button>
             </form>
         </div>
     </section>
@@ -474,13 +426,58 @@
                     <h3>GreenCure Solutions</h3>
                     <p>Your path to personalized wellness.</p>
                     <ul class="social-icons">
-                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#browse-
+                        <li><a href="#hero" aria-label="Home">Home</a></li>
+                        <li><a href="#browse-needs" aria-label="Browse Health Needs">Browse by Needs</a></li>
+                        <li><a href="#bundles" aria-label="Bundles">Bundles</a></li>
+                        <li><a href="#brands" aria-label="Brands">Brands</a></li>
+                        <li><a href="#services" aria-label="Services">Services</a></li>
+                        <li><a href="#testimonials" aria-label="Testimonials">Testimonials</a></li>
+                        <li><a href="#faq" aria-label="FAQ">FAQ</a></li>
+                        <li><a href="#contact" aria-label="Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#" aria-label="Our Mission">Our Mission</a></li>
+                        <li><a href="#" aria-label="Our Team">Our Team</a></li>
+                        <li><a href="#" aria-label="Careers">Careers</a></li>
+                        <li><a href="#" aria-label="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="#" aria-label="Terms of Service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>
+                        [Your Address]
+                        <br>
+                        [Your Phone Number]
+                        <br>
+                        [Your Email Address]
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 GreenCure Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Toggle dropdown menus on hover
+            $('.dropdown').hover(function() {
+                $(this).find('.dropdown-content').show();
+            }, function() {
+                $(this).find('.dropdown-content').hide();
+            });
+
+            // Add smooth scrolling for navigation links
