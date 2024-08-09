@@ -15,18 +15,6 @@ $(document).ready(function() {
         }, 1000); // Adjust scroll speed (1000 milliseconds = 1 second)
     });
 
-    // Hero Slider Initialization
-    $('.hero-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 4000,
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
-
     // Bundles Carousel Initialization
     $('.bundles-carousel').slick({
         slidesToShow: 3,
@@ -83,4 +71,33 @@ $(document).ready(function() {
         $(this).next('p').slideToggle();
         $(this).toggleClass('active'); // Toggle the active class for styling
     });
+
+    // Contact Form Validation (Client-Side)
+    $('#contact form').submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+
+        // Basic validation (you can add more checks)
+        if (name === '' || email === '' || message === '') {
+            alert('Please fill in all fields.');
+            return false;
+        }
+
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        // If validation passes, submit the form
+        $(this).unbind('submit').submit(); // Re-enable form submission
+    });
+
+    // Email Validation Function
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
 });
