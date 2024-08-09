@@ -6,6 +6,11 @@ body {
     background-color: #F5F5F5; /* Light Gray */
     color: #4A4A4A; /* Dark Gray */
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for all links */
 }
 
 header {
@@ -231,6 +236,8 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative; /* For overlay */
+    overflow: hidden; /* Hide content that overflows */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -239,23 +246,39 @@ nav a:hover {
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Add transition for image zoom */
 }
 
-.need-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.need-card:hover img {
+    transform: scale(1.1); /* Zoom image on hover */
 }
 
-.need-card h3 {
-    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for category titles */
+.need-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for overlay fade */
+}
+
+.need-card .card-overlay h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.need-card p {
+.need-card .card-overlay p {
     font-size: 16px;
     line-height: 1.5;
-    color: #4A4A4A; /* Dark Gray */
+    color: #fff; /* White text on overlay */
 }
 
 /* Bundles Section */
@@ -615,6 +638,10 @@ footer {
     #contact form {
         max-width: 90%;
     }
+
+    .need-card .card-overlay h3 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
 }
 
 /* Additional Styling for the Hero Image Slideshow */
@@ -640,4 +667,242 @@ footer {
 
 .hero-slider .slick-dots li.slick-active {
     opacity: 1;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Reason Block Styling */
+.reasons-carousel .reason-block {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
+    transition: transform 0.3s ease;
+}
+
+.reasons-carousel .reason-block:hover {
+    transform: translateY(-5px);
+}
+
+/* Brand Showcase Section */
+#brand-showcase {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+    text-align: center; /* Center-align the content */
+}
+
+#brand-showcase h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#brand-showcase h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.brand-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.brand-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Add a transition for the zoom effect */
+}
+
+.brand-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add a transition for the zoom effect */
+}
+
+.brand-card:hover {
+    transform: scale(1.05); /* Zoom the card on hover */
+}
+
+.brand-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for overlay fade */
+}
+
+.brand-card .card-overlay h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.brand-card .card-overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center; /* Center-align text within the overlay */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column {
+    width: 25%;
+    text-align: left;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.button {
+    background-color: #6dbe45;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #52ac32; /* Darker green on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .bundles-hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form {
+        max-width: 90%;
+    }
+
+    .need-card .card-overlay h3 {
+        font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+
+    .brand-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-card .card-overlay h3 {
+        font-size: 18px; /* Adjust heading size for smaller screens */
+    }
+}
+
+/* Additional Styling for the Hero Image Slideshow */
+.hero-slider {
+    margin-bottom: 40px;
+}
+
+.hero-slider .slick-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px; /* Adjust dot size as needed */
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.hero-slider .slick-dots li.slick-active {
+    opacity: 1;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Reason Block Styling */
+.reasons-carousel .reason-block {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
+    transition: transform 0.3s ease;
+}
+
+.reasons-carousel .reason-block:hover {
+    transform: translateY(-5px);
 }
