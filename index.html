@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greencure Solutions</title>
     <link rel="stylesheet" href="style.css"> 
-    <!-- Link to any additional CSS you have -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
     <script src="script.js"></script> 
@@ -128,77 +130,104 @@
     <section id="browse-needs">
         <div class="container">
             <h2>Browse by Health Needs</h2>
-            <div class="health-needs-grid">
+            <div class="need-carousel">
                 <div class="need-card" data-need="Sharp Mind">
-                    <img src="https://images.pexels.com/photos/736742/pexels-photo-736742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sharp Mind">
-                    <h3>Sharp Mind</h3>
-                    <p>Improve focus, clarity, and cognitive function.</p>
+                    <img src="https://images.pexels.com/photos/736742/pexels-photo-736742.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Sharp Mind">
+                    <div class="card-overlay">
+                        <h3>Sharp Mind</h3>
+                        <p>Improve focus, clarity, and cognitive function.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Energy">
-                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Energy">
-                    <h3>Energy</h3>
-                    <p>Boost energy levels and fight fatigue.</p>
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Energy">
+                    <div class="card-overlay">
+                        <h3>Energy</h3>
+                        <p>Boost energy levels and fight fatigue.</p>
+                    </div>
                 </div>
-                <!-- Add more cards for other health needs -->
                 <div class="need-card" data-need="Mood">
-                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mood">
-                    <h3>Mood</h3>
-                    <p>Support emotional well-being and balance.</p>
+                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Mood">
+                    <div class="card-overlay">
+                        <h3>Mood</h3>
+                        <p>Support emotional well-being and balance.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Relaxation and Sleep">
-                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Relaxation and Sleep">
-                    <h3>Relaxation and Sleep</h3>
-                    <p>Promote relaxation, restful sleep, and stress management.</p>
+                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Relaxation and Sleep">
+                    <div class="card-overlay">
+                        <h3>Relaxation and Sleep</h3>
+                        <p>Promote relaxation, restful sleep, and stress management.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Longevity and Vitality">
-                    <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Longevity and Vitality">
-                    <h3>Longevity and Vitality</h3>
-                    <p>Support healthy aging and vitality.</p>
+                    <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Longevity and Vitality">
+                    <div class="card-overlay">
+                        <h3>Longevity and Vitality</h3>
+                        <p>Support healthy aging and vitality.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Inner and Outer Beauty">
                     <img src="https://images.pexels.com/photos/3810832/pexels-photo-3810832.jpeg" alt="Inner and Outer Beauty">
-                    <h3>Inner and Outer Beauty</h3>
-                    <p>Enhance your natural beauty from within and out.</p>
+                    <div class="card-overlay">
+                        <h3>Inner and Outer Beauty</h3>
+                        <p>Enhance your natural beauty from within and out.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Weight loss">
-                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Weight loss">
-                    <h3>Weight loss</h3>
-                    <p>Support healthy weight management.</p>
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Weight loss">
+                    <div class="card-overlay">
+                        <h3>Weight loss</h3>
+                        <p>Support healthy weight management.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Gut health">
-                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gut health">
-                    <h3>Gut health</h3>
-                    <p>Promote digestive well-being and gut health.</p>
+                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Gut health">
+                    <div class="card-overlay">
+                        <h3>Gut health</h3>
+                        <p>Promote digestive well-being and gut health.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Migraine Prevention">
-                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Migraine Prevention">
-                    <h3>Migraine Prevention</h3>
-                    <p>Help prevent and manage migraines naturally.</p>
+                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Migraine Prevention">
+                    <div class="card-overlay">
+                        <h3>Migraine Prevention</h3>
+                        <p>Help prevent and manage migraines naturally.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Immunity">
-                    <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Immunity">
-                    <h3>Immunity</h3>
-                    <p>Support a strong and healthy immune system.</p>
+                    <img src="https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Immunity">
+                    <div class="card-overlay">
+                        <h3>Immunity</h3>
+                        <p>Support a strong and healthy immune system.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Sexual Health">
                     <img src="https://images.pexels.com/photos/3810832/pexels-photo-3810832.jpeg" alt="Sexual Health">
-                    <h3>Sexual Health</h3>
-                    <p>Support sexual health and well-being.</p>
+                    <div class="card-overlay">
+                        <h3>Sexual Health</h3>
+                        <p>Support sexual health and well-being.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Workout and Athletic Performance">
-                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Workout and Athletic Performance">
-                    <h3>Workout and Athletic Performance</h3>
-                    <p>Enhance workout performance and recovery.</p>
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Workout and Athletic Performance">
+                    <div class="card-overlay">
+                        <h3>Workout and Athletic Performance</h3>
+                        <p>Enhance workout performance and recovery.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Detox">
-                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Detox">
-                    <h3>Detox</h3>
-                    <p>Support natural detoxification and cleansing.</p>
+                    <img src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Detox">
+                    <div class="card-overlay">
+                        <h3>Detox</h3>
+                        <p>Support natural detoxification and cleansing.</p>
+                    </div>
                 </div>
                 <div class="need-card" data-need="Holistic health">
-                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Holistic health">
-                    <h3>Holistic health</h3>
-                    <p>Promote overall well-being and balance.</p>
+                    <img src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Holistic health">
+                    <div class="card-overlay">
+                        <h3>Holistic health</h3>
+                        <p>Promote overall well-being and balance.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -454,25 +483,4 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#hero">Home</a></li>
-                        <li><a href="#browse-needs">Browse by Health Needs</a></li>
-                        <li><a href="#bundles">Bundles</a></li>
-                        <li><a href="#brands">Our Brands</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#collection">Collection</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Customer Service</h3>
-                    <p>Phone: +1-555-123-4567</p>
-                    <p>Email: support@greencure.com</p>
-                </div>
-            </div>
-            <p class="copyright">© 2023 GreenCure Solutions. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                        <li><a href="#browse-
