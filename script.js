@@ -1,9 +1,9 @@
-$(document).ready(function() {
+(function() {
     // Toggle dropdown menus on hover
-    $('.dropdown').on('mouseenter', function() {
-        $(this).find('.dropdown-content').stop(true, true).slideDown(200); // Smooth slide down
-    }).on('mouseleave', function() {
-        $(this).find('.dropdown-content').stop(true, true).slideUp(200); // Smooth slide up
+    $('.dropdown').hover(function() {
+        $(this).find('.dropdown-content').show();
+    }, function() {
+        $(this).find('.dropdown-content').hide();
     });
 
     // Add smooth scrolling for navigation links
@@ -51,31 +51,22 @@ $(document).ready(function() {
         ]
     });
 
-    // Reasons Carousel Initialization
-    $('.reasons-carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
-
     // Browse by Health Needs Card Hover Effect
     $('.need-card').hover(function() {
-        $(this).find('.card-overlay').stop(true, true).fadeIn(200); // Show overlay on hover
+        $(this).find('p').show(); // Show description on hover
+        $(this).css('transform', 'translateY(-5px) scale(1.05)'); // Zoom slightly
     }, function() {
-        $(this).find('.card-overlay').stop(true, true).fadeOut(200); // Hide overlay on mouseout
+        $(this).find('p').hide(); // Hide description on mouseout
+        $(this).css('transform', 'translateY(0) scale(1)'); // Reset transform
     });
 
     // Add click event for cards (replace with your actual redirect logic)
     $('.need-card').click(function() {
         var need = $(this).data('need');
-        window.location.href = '/health-needs/' + need; // Replace with the correct URL structure
+
+        // Example: Redirect to a page based on the data-need attribute
+        // Assuming you have pages like /health-needs/sharp-mind, /health-needs/energy, etc.
+        window.location.href = '/health-needs/' + need.toLowerCase().replace(/ /g, '-');
     });
 
     // Testimonials Slider
@@ -92,36 +83,18 @@ $(document).ready(function() {
 
     // FAQ Accordion
     $('.faq-item h3').click(function() {
-        $(this).next('p').slideToggle(200); // Smooth slide toggle
+        $(this).next('p').slideToggle();
         $(this).toggleClass('active'); // Toggle the active class for styling
     });
 
-    // Contact Form Validation (Client-Side)
-    $('#contact form').submit(function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var message = $('#message').val();
-
-        // Basic validation (you can add more checks)
-        if (name === '' || email === '' || message === '') {
-            alert('Please fill in all fields.');
-            return false;
-        }
-
-        if (!validateEmail(email)) {
-            alert('Please enter a valid email address.');
-            return false;
-        }
-
-        // If validation passes, submit the form
-        $(this).unbind('submit').submit(); // Re-enable form submission
+    // Error Handling for Slick Carousels (example)
+    $('.hero-slider, .bundles-carousel, .testimonial-slider').on('init', function(event, slick) {
+        // Carousel initialized successfully
+    }).on('error', function(event, slick, error) {
+        console.error("Slick Carousel Error:", error);
+        // Handle the error gracefully (e.g., display an error message)
+        // Example:
+        // $(this).html('<p>Error loading carousel.</p>');
     });
 
-    // Email Validation Function
-    function validateEmail(email) {
-        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-});
+})();
