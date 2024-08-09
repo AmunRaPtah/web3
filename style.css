@@ -1,21 +1,21 @@
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; 
-    color: #333; 
+    background-color: #F5F5F5; /* Light Gray */
+    color: #4A4A4A; /* Dark Gray */
     line-height: 1.6;
 }
 
 header {
-    background-color: #fff; 
+    background-color: #fff;
     padding: 15px 0;
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10; 
+    z-index: 10;
 }
 
 .container {
@@ -28,7 +28,7 @@ header {
 .header-top {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 .logo {
@@ -46,13 +46,13 @@ header {
 
 .search-form {
     margin-right: 20px;
-    position: relative; 
+    position: relative;
 }
 
 .search-form input {
     padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px; 
+    border-radius: 5px 0 0 5px;
     width: 150px; /* Adjust width as needed */
     outline: none; /* Remove focus outline */
 }
@@ -70,7 +70,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .social-icons li {
@@ -83,18 +83,20 @@ header {
     color: #333;
 }
 
-.cart, .account {
+.cart,
+.account {
     margin-right: 15px;
     cursor: pointer;
 }
 
-.cart i, .account i {
+.cart i,
+.account i {
     font-size: 1.5rem; /* Adjust icon size as needed */
     color: #333;
 }
 
 nav {
-    background-color: #fff; 
+    background-color: #fff;
     padding: 10px 0;
 }
 
@@ -102,9 +104,9 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav li {
@@ -115,6 +117,7 @@ nav a {
     text-decoration: none;
     color: #333; /* Dark gray text */
     font-weight: bold; /* Bold navigation links */
+    font-family: 'Montserrat', sans-serif; /* Montserrat Bold for navigation */
 }
 
 nav a:hover {
@@ -123,7 +126,7 @@ nav a:hover {
 
 /* Dropdown Styling */
 .dropdown {
-    position: relative; 
+    position: relative;
 }
 
 .dropdown-content {
@@ -132,8 +135,8 @@ nav a:hover {
     background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    width: 150px; 
-    left: 0; 
+    width: 150px;
+    left: 0;
 }
 
 .dropdown-content li {
@@ -158,28 +161,57 @@ nav a:hover {
     color: #fff;
     padding: 150px 0;
     text-align: center;
+    position: relative; /* For the video overlay */
 }
 
-.hero-slider {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-slider .slide {
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.hero-slider .slide-content {
+#hero::before {
+    content: '';
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Bold for heading */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#hero .button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #2A9DF4; /* Blue button */
     color: #fff;
-    z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hero .button:hover {
+    background-color: #1977D2; /* Darker blue on hover */
 }
 
 /* Browse by Health Needs */
@@ -199,7 +231,7 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .need-card img {
@@ -214,22 +246,35 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.need-card h3 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for category titles */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.need-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
+}
+
 /* Bundles Section */
 #bundles {
     padding: 50px 0;
+    background-color: #F5F5F5; /* Light Gray background */
 }
 
 .bundles-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 .hero-image {
     background-size: cover;
     background-position: center;
-    width: 50%; 
+    width: 50%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -256,6 +301,8 @@ nav a:hover {
 
 .hero-image h2 {
     z-index: 2;
+    font-family: 'Montserrat', sans-serif; /* Montserrat Bold for heading */
+    font-size: 28px;
 }
 
 .hero-text {
@@ -269,6 +316,25 @@ nav a:hover {
 
 .bundle-card {
     /* Styling for each bundle card */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bundle-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.bundle-card h3 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for bundle titles */
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* Our Brands Section */
@@ -297,9 +363,58 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.brand-item h3 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for brand titles */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.brand-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
+}
+
 /* Services Section */
 #services {
     padding: 50px 0;
+    background-color: #F5F5F5; /* Light Gray background */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item figure {
+    margin-bottom: 15px;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-item figcaption {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for service titles */
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
 }
 
 /* Collection Section */
@@ -310,6 +425,60 @@ nav a:hover {
 /* Testimonials Section */
 #testimonials {
     padding: 50px 0;
+    background-color: #F5F5F5; /* Light Gray background */
+}
+
+.testimonial-slider {
+    /* Styling for the testimonial slider */
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    position: relative; /* For the quote icon */
+}
+
+.testimonial p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4A4A4A; /* Dark Gray */
+    margin-bottom: 20px;
+}
+
+.testimonial::before {
+    content: '\f10d'; /* Font Awesome icon for quote */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #6DBE45; /* Green quote icon */
+}
+
+.testimonial .author {
+    text-align: center;
+}
+
+.testimonial .author img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial .author h3 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for testimonial author name */
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.testimonial .author p {
+    font-size: 14px;
+    color: #4A4A4A; /* Dark Gray */
 }
 
 /* FAQ Section */
@@ -320,6 +489,52 @@ nav a:hover {
 /* Contact Form Section */
 #contact {
     padding: 50px 0;
+    background-color: #F5F5F5; /* Light Gray background */
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif; /* Montserrat Semi-Bold for labels */
+    font-size: 16px;
+    color: #4A4A4A; /* Dark Gray */
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#contact button {
+    background-color: #6DBE45; /* Green button */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #52ac32; /* Darker green on hover */
 }
 
 /* Footer */
@@ -332,7 +547,7 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 .footer-column {
@@ -372,7 +587,7 @@ footer {
 
     .hero-image {
         width: 100%;
-        height: 200px; 
+        height: 200px;
     }
 
     .hero-text {
@@ -385,23 +600,31 @@ footer {
     }
 
     .footer-content {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .footer-column {
         width: 100%;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form {
+        max-width: 90%;
     }
 }
 
 /* Additional Styling for the Hero Image Slideshow */
 .hero-slider {
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .hero-slider .slick-dots {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .hero-slider .slick-dots li {
