@@ -1,1 +1,44 @@
-!function(){$('.dropdown').hover(function(){$(this).find('.dropdown-content').show()},function(){$(this).find('.dropdown-content').hide()}),$('nav a').click(function(e){e.preventDefault();var t=$(this).attr('href');$('html, body').animate({scrollTop:$(t).offset().top},1e3)}),$('.hero-slider').slick({autoplay:!0,autoplaySpeed:4e3,dots:!0,arrows:!1,infinite:!0,speed:500,fade:!0,cssEase:'linear'}),$('.bundles-carousel').slick({slidesToShow:3,slidesToScroll:1,autoplay:!0,autoplaySpeed:3e3,dots:!0,arrows:!1,responsive:[{breakpoint:768,settings:{slidesToShow:2}},{breakpoint:480,settings:{slidesToShow:1}}]}),$('.need-card').hover(function(){$(this).find('p').show(),$(this).css('transform','translateY(-5px) scale(1.05)')},function(){$(this).find('p').hide(),$(this).css('transform','translateY(0) scale(1)')}),$('.need-card').click(function(){var e=$(this).data('need');window.location.href='/health-needs/'+e.toLowerCase().replace(/ /g,'-')}),$('.testimonial-slider').slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:5e3,dots:!0,arrows:!1,fade:!0,cssEase:'linear'}),$('.faq-item h3').click(function(){$(this).next('p').slideToggle(),$(this).toggleClass('active')}),$('.hero-slider, .bundles-carousel, .testimonial-slider').on('init',function(e,t){}).on('error',function(e,t,i){console.error("Slick Carousel Error:",i)})}()
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelector('.carousel-indicators');
+
+    let currentIndex = 0;
+    let totalItems = items.length;
+
+    // Create indicators
+    items.forEach((item, index) => {
+        const indicator = document.createElement('div');
+        indicator.dataset.index = index;
+        indicator.addEventListener('click', () => moveTo(index));
+        indicators.appendChild(indicator);
+    });
+
+    // Auto-slide function
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        moveTo(currentIndex);
+    }
+
+    // Move to a specific slide
+    function moveTo(index) {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+        updateIndicators();
+    }
+
+    // Update indicators
+    function updateIndicators() {
+        indicators.querySelectorAll('div').forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Initialize
+    updateIndicators();
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+
+    // Pause on hover
+    carousel.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
+    carousel.addEventListener('mouseout', () => autoSlideInterval = setInterval(autoSlide, 3000));
+});
