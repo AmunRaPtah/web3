@@ -1,1 +1,117 @@
-body{font-family:Arial,sans-serif;margin:0;padding:0;background-color:#f4f4f4;color:#333;line-height:1.6}header{background-color:#fff;padding:15px 0;position:fixed;top:0;width:100%;box-shadow:0 2px 4px rgba(0,0,0,.1);z-index:10}.container{max-width:1200px;margin:0 auto;padding:0 15px}.header-top{display:flex;justify-content:space-between;align-items:center}.logo{margin-right:20px}.logo img{max-width:150px}.header-right{display:flex;align-items:center}.search-form{margin-right:20px;position:relative}.search-form input{padding:8px;border:1px solid #ddd;border-radius:5px 0 0 5px;width:150px;outline:none}.search-form button{background-color:#6dbe45;color:#fff;border:none;padding:8px 12px;border-radius:0 5px 5px 0;cursor:pointer}.social-icons{list-style:none;padding:0;margin:0;margin-right:20px}.social-icons li{display:inline-block;margin-right:10px}.social-icons i{font-size:1.2rem;color:#333}.cart,.account{margin-right:15px;cursor:pointer}.cart i,.account i{font-size:1.5rem;color:#333}nav{background-color:#fff;padding:10px 0}nav ul{list-style:none;padding:0;margin:0;display:flex;justify-content:space-between;align-items:center}nav li{margin:0 10px}nav a{text-decoration:none;color:#333;font-weight:700}nav a:hover{color:#6dbe45}.dropdown{position:relative}.dropdown-content{display:none;position:absolute;background-color:#fff;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1;width:150px;left:0}.dropdown-content li{padding:10px 0;text-align:left}.dropdown-content li a{text-decoration:none;color:#333}.dropdown:hover .dropdown-content{display:block}#hero{background-size:cover;background-position:center;color:#fff;padding:150px 0;text-align:center}.hero-slider{position:relative;overflow:hidden}.hero-slider .slide{width:100%;height:400px;background-size:cover;background-position:center;position:relative}.hero-slider .slide-content{position:absolute;bottom:20px;left:20px;color:#fff;z-index:2;text-shadow:2px 2px 5px rgba(0,0,0,.5)}#browse-needs{padding:50px 0}.health-needs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.need-card{background-color:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.1);text-align:center;transition:transform .3s ease,box-shadow .3s ease}.need-card img{max-width:100%;height:auto;border-radius:8px;margin-bottom:15px}.need-card:hover{transform:translateY(-5px);box-shadow:0 4px 8px rgba(0,0,0,.2)}#bundles{padding:50px 0}.bundles-hero{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.hero-image{background-size:cover;background-position:center;width:50%;height:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:10px;color:#fff;text-align:center;padding:20px;position:relative}.hero-image::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.3);z-index:1;border-radius:10px}.hero-image h2{z-index:2}.hero-text{width:45%;padding:20px}#brands{padding:50px 0}.brands-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.brand-item{background-color:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.1);text-align:center}.brand-item img{max-width:100%;height:auto;border-radius:8px;margin-bottom:15px}#services{padding:50px 0}#collection{padding:50px 0}#testimonials{padding:50px 0}#faq{padding:50px 0}#contact{padding:50px 0}footer{background-color:#333;color:#fff;padding:30px 0}.footer-content{display:flex;justify-content:space-between;align-items:center}.footer-column{width:25%;text-align:left}.copyright{text-align:center;font-size:.8rem;margin-top:20px}.button{background-color:#6dbe45;color:#fff;padding:12px 20px;border:none;border-radius:5px;text-decoration:none;font-size:1rem;cursor:pointer;transition:background-color .3s ease}.button:hover{background-color:#52ac32}@media (max-width:992px){.bundles-hero{flex-direction:column;align-items:center}.hero-image{width:100%;height:200px}.hero-text{width:100%;margin-top:20px}.brands-grid{grid-template-columns:1fr}.footer-content{flex-direction:column}.footer-column{width:100%;margin-bottom:20px}}.hero-slider{margin-bottom:40px}.hero-slider .slick-dots{text-align:center;margin-top:20px}.hero-slider .slick-dots li{display:inline-block;margin:0 5px;width:10px;height:10px;border-radius:50%;background-color:#fff;opacity:.5;cursor:pointer}.hero-slider .slick-dots li.slick-active{opacity:1}
+/* Basic Layout */
+.browse-health-needs {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.section-header h3 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    cursor: grab;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicators .active {
+    background-color: #333;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 200px;
+    }
+
+    .carousel-caption {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
